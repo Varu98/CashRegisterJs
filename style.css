@@ -1,16 +1,70 @@
+:root {
+  /* CSS HEX */
+  --nyanza: #d8f3dcff;
+  --turquoise-green: #b7e4c7ff;
+  --turquoise-green-2: #95d5b2ff;
+  --ocean-green: #74c69dff;
+  --ocean-green-2: #52b788ff;
+  --illuminating-emerald: #40916cff;
+  --bottle-green: #2d6a4fff;
+  --brunswick-green: #1b4332ff;
+  --dark-jungle-green: #081c15ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   text-align: center;
+  background-color: var(--brunswick-green);
+  color: var(--turquoise-green-2);
 }
-.container {
-  display: flex;
-  flex-flow: column;
-}
-table,
-th,
-td,
-tr {
-  border: 1px solid black;
-  background: #ddd;
-  padding: 0.5rem;
+
+button {
+  margin-top: 3rem;
+  color: var(--brunswick-green);
+  background-color: var(--turquoise-green-2);
+  padding: 1rem 2rem;
   margin: 1rem;
+  font-size: x-large;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  padding: 1rem;
+}
+h3 {
+  padding: 1rem 0 3rem 0;
+}
+
+.header {
+  background-color: var(--bottle-green);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  font-size: x-large;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+input {
+  font-size: x-large;
+  padding: 0.3rem 1rem;
+  outline-width: 0ch;
+  margin: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.cashAmt {
+  padding: 2rem;
+}
+.billAmt {
+  padding: 1rem;
+}
+#form {
+  margin-top: 3rem;
 }
