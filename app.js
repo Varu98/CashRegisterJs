@@ -9,15 +9,14 @@ const form = document.querySelector("#form");
 
 let sum;
 
-form.addEventListener("submit", function onSubmit(e) {
+form.addEventListener("click", function onSubmit(e) {
   e.preventDefault();
-  if (billAmt.value <= 0) {
+  hideError();
+  if (billAmt.value < 0) {
     showError("Enter A Valid Amount");
-    if (cashAmt.value < billAmt.value) {
-      showError(
-        `Ask The Customer To Pay ${billAmt.value - cashAmt.value} More`
-      );
-    }
+  }
+  if (cashAmt.value < billAmt.value) {
+    showError("Ask The Customer To Pay More ");
   } else {
     sum = cashAmt.value - billAmt.value;
     console.log(sum);
