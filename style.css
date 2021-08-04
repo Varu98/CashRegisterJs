@@ -68,3 +68,10 @@ input {
 #form {
   margin-top: 3rem;
 }
+.billAmt {
+  flex-basis: 100%;
+}
+
+.cashAmt {
+  flex-basis: 100%;
+}
