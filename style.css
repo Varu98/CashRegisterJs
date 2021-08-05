@@ -49,7 +49,7 @@ h3 {
 label {
   font-size: x-large;
   padding: 1rem;
-  margin: 1rem;
+  margin: 0.2rem;
 }
 
 input {
@@ -59,19 +59,16 @@ input {
   margin: 1rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
-.cashAmt {
-  padding: 2rem;
+#cash-Amt {
+  margin-bottom: 4rem;
 }
 .billAmt {
   padding: 1rem;
 }
 #form {
   margin-top: 3rem;
-}
-.billAmt {
-  flex-basis: 100%;
-}
-
-.cashAmt {
-  flex-basis: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
 }
