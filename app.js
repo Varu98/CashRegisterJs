@@ -26,8 +26,7 @@ form.addEventListener("submit", function onSubmit(e) {
       "If you can not pay the bill, you may do the dishes and your debt will  be paid"
     );
   } else {
-    sum = numBillAmt - numCashAmt;
-    sum = -sum;
+    sum = numCashAmt - numBillAmt;
     calculateChange(sum);
   }
 });
