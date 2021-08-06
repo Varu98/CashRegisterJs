@@ -6,24 +6,36 @@ const errorDiv = document.querySelector(".errorDiv");
 
 const btn = document.querySelector(".btn");
 const form = document.querySelector("#form");
+const table = document.querySelectorAll(".table");
+
+const notesArray = [2000, 500, 100, 20, 10, 5, 1];
 
 let sum;
 
 form.addEventListener("submit", function onSubmit(e) {
   e.preventDefault();
-  hideError();
-  if (billAmt.value < 0) {
-    showError("Enter A Valid Amount");
+
+  if (Number(billAmt.value) < 0) {
+    showError("Enter a valid bill amount.");
   }
-  if (cashAmt.value < billAmt.value) {
+  if (Number(cashAmt.value < billAmt.value)) {
     showError(
-      `Ask The Customer To Pay  ${billAmt.value - cashAmt.value} More `
+      "If you can not pay the bill, you may do the dishes and your debt will  be paid"
     );
   } else {
-    sum = cashAmt.value - billAmt.value;
-    console.log(sum);
+    sum = Number(billAmt.value - cashAmt.value);
+    calculateChange(sum);
   }
 });
+
+function calculateChange(total) {
+  for (let i = 0; i < notesArray.length; i++) {
+    const notes = Math.trunc(total / notesArray[i]);
+    Math.trunc((total %= notesArray[i]));
+    table[i].innerHTML = `${notes}`;
+    console.log(total, notes);
+  }
+}
 
 function showError(message) {
   errorDiv.style.display = "block";
